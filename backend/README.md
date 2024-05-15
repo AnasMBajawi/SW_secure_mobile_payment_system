@@ -35,3 +35,42 @@ npm start: Starts the application
 npm run dev: Starts the application in development mode
 npm test: Runs the tests
 npm run build: Builds the project for production
+
+
+
+for the registrtion API : 
+http://localhost:5000/user/register
+payload: {
+     "firstName": "ismail",
+    "lastName": "bajawi",
+    "date_of_birth":"2001-04-23",
+    "phone_number": "777582933",
+    "email": "ibajawi@mail.com",
+    "password": "ANas@2001"
+}
+
+
+for the login API : 
+http://localhost:5000/user/login
+payload: {
+    "email": "ibajawi@mail.com",
+    "password": "ANas@2001"
+}
+
+for the post product API:
+http://localhost:5000/product/
+payload : {
+        "name": "iphone14",
+    "description": "the new iphone 14",
+    "images": "",
+    "catagory" : "phone",
+    "price": "550"
+}
+and you should copy the token from login response in order to be able to post and place it in Authorization -> then choose bearer Token and paste it there
+
+for the checkout you should be autheintacted too so you should copy the token from login response in order to be able to post and place it in Authorization -> then choose bearer Token and paste it there :
+http://localhost:5000/product/cart/checkout
+payload : {
+    "name": "nepdate for 805",
+    "price": 30
+}
